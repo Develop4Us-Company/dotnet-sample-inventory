@@ -79,6 +79,45 @@
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralICountryClient.AppProject#Web#ApiClient#General#ICountryClient#DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
+        <member name="T:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.GetAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.GetListAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.PostAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Core.Models.Inventory.Product},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.PutAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Core.Models.Inventory.Product},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.AppProject#Web#ApiClient#General#IProductClient#GetAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.AppProject#Web#ApiClient#General#IProductClient#GetListAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.AppProject#Web#ApiClient#General#IProductClient#PostAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Core.Models.Inventory.Product},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.AppProject#Web#ApiClient#General#IProductClient#PutAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Core.Models.Inventory.Product},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIProductClient.AppProject#Web#ApiClient#General#IProductClient#DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
         <member name="T:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStateClient">
             <inheritdoc />
         </member>
@@ -110,6 +149,45 @@
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStateClient.AppProject#Web#ApiClient#General#IStateClient#DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.GetByProductAsync(AppProject.Models.GetByParentIdRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.PostAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Core.Models.Inventory.StockMovement},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.PutAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Core.Models.Inventory.StockMovement},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.GetAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.AppProject#Web#ApiClient#General#IStockMovementClient#GetByProductAsync(AppProject.Models.GetByParentIdRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.AppProject#Web#ApiClient#General#IStockMovementClient#PostAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Core.Models.Inventory.StockMovement},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.AppProject#Web#ApiClient#General#IStockMovementClient#PutAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Core.Models.Inventory.StockMovement},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.AppProject#Web#ApiClient#General#IStockMovementClient#DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStockMovementClient.AppProject#Web#ApiClient#General#IStockMovementClient#GetAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
     </members>

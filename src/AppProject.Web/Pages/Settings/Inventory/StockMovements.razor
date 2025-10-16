@@ -1,0 +1,94 @@
+@page "/settings/inventory/stockmovements"
+
+@inherits AppProjectPageBase
+
+<PageTitle>@StringResource.GetStringByKey("StockMovement_List_Title")</PageTitle>
+
+<RadzenText TextStyle="TextStyle.DisplayH3" Text=@StringResource.GetStringByKey("StockMovement_List_Title") />
+
+<RadzenDataGrid Data="@movements" TItem="StockMovement" AllowFiltering="true" AllowColumnResize="true" AllowSorting="true" 
+    PageSize="10" AllowPaging="true">
+    <Columns>
+        <RadzenDataGridColumn TItem="StockMovement" Property="MovementDate" Title=@StringResource.GetStringByKey("StockMovement_MovementDate") />
+        <RadzenDataGridColumn TItem="StockMovement" Property="Quantity" Title=@StringResource.GetStringByKey("StockMovement_Quantity") />
+        <RadzenDataGridColumn TItem="StockMovement" Property="IsOut" Title=@StringResource.GetStringByKey("StockMovement_IsOut") />
+        <RadzenDataGridColumn TItem="StockMovement" Context="movement" Filterable="false" Sortable="false">
+            <Template>
+                <RadzenButton ButtonStyle="ButtonStyle.Info" Icon="edit" Click=@(() => NavigateToEdit(movement.Id)) />
+                <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="delete" Click=@(() => DeleteMovement(movement.Id)) />
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+<div class="mt-4">
+    <RadzenButton ButtonStyle="ButtonStyle.Primary" Icon="add" Text="Add Movement" Click=@(() => NavigateToEdit(null)) />
+</div>
+
+@code {
+    private IEnumerable<StockMovement> movements = Array.Empty<StockMovement>();
+    
+    [Inject]
+    private IStockMovementClient StockMovementClient { get; set; } = default!;
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+
+    [Inject] 
+    private NotificationService NotificationService { get; set; } = default!;
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? ProductId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadMovementsAsync();
+    }
+
+    private async Task LoadMovementsAsync()
+    {
+        try
+        {
+            if (!string.IsNullOrEmpty(ProductId) && Guid.TryParse(ProductId, out var productId))
+            {
+                var response = await StockMovementClient.GetByProductAsync(new GetByParentIdRequest<Guid> { ParentId = productId });
+                movements = response.Entities;
+            }
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = "Failed to load movements" });
+        }
+    }
+
+    private void NavigateToEdit(Guid? id)
+    {
+        var url = id.HasValue 
+            ? $"/settings/inventory/stockmovements/{id}" 
+            : "/settings/inventory/stockmovements/new";
+            
+        if (!string.IsNullOrEmpty(ProductId))
+        {
+            url += $"?productId={ProductId}";
+        }
+        
+        NavigationManager.NavigateTo(url);
+    }
+
+    private async Task DeleteMovement(Guid? id)
+    {
+        if (!id.HasValue) return;
+
+        try
+        {
+            await StockMovementClient.DeleteAsync(new DeleteRequest<Guid> { Id = id.Value });
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success", Detail = "Movement deleted" });
+            await LoadMovementsAsync();
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = "Failed to delete movement" });
+        }
+    }
+}

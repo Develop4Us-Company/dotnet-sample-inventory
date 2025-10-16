@@ -7,6 +7,9 @@
     <ProjectReference Include="../AppProject.Exceptions/AppProject.Exceptions.csproj" />
     <ProjectReference Include="../AppProject.Resources/AppProject.Resources.csproj" />
     <ProjectReference Include="../AppProject.Utils/AppProject.Utils.csproj" />
+    <ProjectReference Include="../AppProject.Core.Models.Inventory/AppProject.Core.Models.Inventory.csproj" />
+    <ProjectReference Include="../AppProject.Core.Services.Inventory/AppProject.Core.Services.Inventory.csproj" />
+    <ProjectReference Include="../AppProject.Core.Infrastructure.Email/AppProject.Core.Infrastructure.Email.csproj" />
   </ItemGroup>
 
   <ItemGroup>

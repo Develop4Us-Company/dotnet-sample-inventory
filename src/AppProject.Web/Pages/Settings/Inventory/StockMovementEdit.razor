@@ -1,0 +1,128 @@
+@page "/settings/inventory/stockmovements/{id}"
+@page "/settings/inventory/stockmovements/new"
+
+@inherits AppProjectPageBase
+
+<PageTitle>@StringResource.GetStringByKey("StockMovement_Edit_Title")</PageTitle>
+
+<RadzenText TextStyle="TextStyle.DisplayH3" Text=@StringResource.GetStringByKey("StockMovement_Edit_Title") />
+
+<EditForm Model="@movement" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="row">
+        <div class="col-md-6">
+            <RadzenFormField Text=@StringResource.GetStringByKey("StockMovement_Product") Style="margin-top: 20px">
+                <RadzenDropDown @bind-Value="@movement.ProductId" Data="@products" 
+                              TextProperty="Name" ValueProperty="Id" 
+                              Disabled="@(!string.IsNullOrEmpty(ProductId))" />
+                <ValidationMessage For="@(() => movement.ProductId)" />
+            </RadzenFormField>
+
+            <RadzenFormField Text=@StringResource.GetStringByKey("StockMovement_Quantity") Style="margin-top: 20px">
+                <RadzenNumeric @bind-Value="@movement.Quantity" />
+                <ValidationMessage For="@(() => movement.Quantity)" />
+            </RadzenFormField>
+
+            <RadzenFormField Text=@StringResource.GetStringByKey("StockMovement_MovementDate") Style="margin-top: 20px">
+                <RadzenDatePicker @bind-Value="@movement.MovementDate" DateFormat="d" />
+                <ValidationMessage For="@(() => movement.MovementDate)" />
+            </RadzenFormField>
+
+            <RadzenFormField Text=@StringResource.GetStringByKey("StockMovement_IsOut") Style="margin-top: 20px">
+                <RadzenCheckBox @bind-Value="@movement.IsOut" />
+                <ValidationMessage For="@(() => movement.IsOut)" />
+            </RadzenFormField>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col">
+            <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Text="Save" />
+            <RadzenButton ButtonStyle="ButtonStyle.Light" Click=@(() => NavigateBack()) Text="Cancel" />
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private StockMovement movement = new() { MovementDate = DateTime.Today };
+    private IEnumerable<Product> products = Array.Empty<Product>();
+
+    [Parameter]
+    public string? Id { get; set; }
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? ProductId { get; set; }
+
+    [Inject]
+    private IStockMovementClient StockMovementClient { get; set; } = default!;
+
+    [Inject]
+    private IProductClient ProductClient { get; set; } = default!;
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+
+    [Inject]
+    private NotificationService NotificationService { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadProductsAsync();
+
+        if (!string.IsNullOrEmpty(ProductId) && Guid.TryParse(ProductId, out var productId))
+        {
+            movement.ProductId = productId;
+        }
+    }
+
+    private async Task LoadProductsAsync()
+    {
+        try
+        {
+            var response = await ProductClient.GetListAsync();
+            products = response.Entities;
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = "Failed to load products" });
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            var request = new CreateOrUpdateRequest<StockMovement> { Entity = movement };
+            
+            if (!movement.Id.HasValue)
+            {
+                await StockMovementClient.PostAsync(request);
+                NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success", Detail = "Movement created" });
+            }
+            else
+            {
+                await StockMovementClient.PutAsync(request);
+                NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success", Detail = "Movement updated" });
+            }
+
+            NavigateBack();
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = "Failed to save movement" });
+        }
+    }
+
+    private void NavigateBack()
+    {
+        var url = "/settings/inventory/stockmovements";
+        if (!string.IsNullOrEmpty(ProductId))
+        {
+            url += $"?productId={ProductId}";
+        }
+        NavigationManager.NavigateTo(url);
+    }
+}

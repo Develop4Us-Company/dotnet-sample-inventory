@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="InventoryLowStock_EmailSubject" xml:space="preserve">
+    <value>Low stock alert</value>
+  </data>
+  <data name="InventoryLowStock_EmailBody" xml:space="preserve">
+    <value>The following products have low stock:\n{0}</value>
+  </data>
+  <data name="Menu_Inventory" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="Menu_Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="Menu_StockMovements" xml:space="preserve">
+    <value>Stock Movements</value>
+  </data>
+</root>

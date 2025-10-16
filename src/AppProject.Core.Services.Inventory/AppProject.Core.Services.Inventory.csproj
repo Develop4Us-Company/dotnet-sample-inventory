@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../AppProject.Core.Infrastructure.Database/AppProject.Core.Infrastructure.Database.csproj" />
+    <ProjectReference Include="../AppProject.Core.Models.Inventory/AppProject.Core.Models.Inventory.csproj" />
+    <ProjectReference Include="../AppProject.Models/AppProject.Models.csproj" />
+    <ProjectReference Include="../AppProject.Resources/AppProject.Resources.csproj" />
+  </ItemGroup>
+</Project>

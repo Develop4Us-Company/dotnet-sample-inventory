@@ -1,0 +1,81 @@
+@page "/settings/inventory/products"
+
+@inherits AppProjectPageBase
+
+<PageTitle>@StringResource.GetStringByKey("Product_List_Title")</PageTitle>
+
+<RadzenText TextStyle="TextStyle.DisplayH3" Text=@StringResource.GetStringByKey("Product_List_Title") />
+
+<RadzenDataGrid Data="@products" TItem="Product" AllowFiltering="true" AllowColumnResize="true" AllowSorting="true" 
+    PageSize="10" AllowPaging="true">
+    <Columns>
+        <RadzenDataGridColumn TItem="Product" Property="Name" Title=@StringResource.GetStringByKey("Product_Name") />
+        <RadzenDataGridColumn TItem="Product" Property="Code" Title=@StringResource.GetStringByKey("Product_Code") />
+        <RadzenDataGridColumn TItem="Product" Property="MinimumStockQuantity" Title=@StringResource.GetStringByKey("Product_MinimumStockQuantity") />
+        <RadzenDataGridColumn TItem="Product" Context="product" Filterable="false" Sortable="false">
+            <Template>
+                <RadzenButton ButtonStyle="ButtonStyle.Info" Icon="edit" Click=@(() => NavigateToEdit(product.Id)) />
+                <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="delete" Click=@(() => DeleteProduct(product.Id)) />
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+<div class="mt-4">
+    <RadzenButton ButtonStyle="ButtonStyle.Primary" Icon="add" Text="Add Product" Click=@(() => NavigateToEdit(null)) />
+</div>
+
+@code {
+    private IEnumerable<Product> products = Array.Empty<Product>();
+    
+    [Inject]
+    private IProductClient ProductClient { get; set; } = default!;
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+
+    [Inject] 
+    private NotificationService NotificationService { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadProductsAsync();
+    }
+
+    private async Task LoadProductsAsync()
+    {
+        try
+        {
+            var response = await ProductClient.GetListAsync();
+            products = response.Entities;
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = "Failed to load products" });
+        }
+    }
+
+    private void NavigateToEdit(Guid? id)
+    {
+        var url = id.HasValue 
+            ? $"/settings/inventory/products/{id}" 
+            : "/settings/inventory/products/new";
+        NavigationManager.NavigateTo(url);
+    }
+
+    private async Task DeleteProduct(Guid? id)
+    {
+        if (!id.HasValue) return;
+
+        try
+        {
+            await ProductClient.DeleteAsync(new DeleteRequest<Guid> { Id = id.Value });
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success", Detail = "Product deleted" });
+            await LoadProductsAsync();
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = "Failed to delete product" });
+        }
+    }
+}

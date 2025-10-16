@@ -14,6 +14,11 @@
                 <RadzenPanelMenuItem Text=@StringResource.GetStringByKey("Menu_Countries_Item_Text") Icon="globe" Path="general/countries" />
                 <RadzenPanelMenuItem Text=@StringResource.GetStringByKey("Menu_States_Item_Text") Icon="globe_location_pin" Path="general/states" />
                 <RadzenPanelMenuItem Text=@StringResource.GetStringByKey("Menu_Cities_Item_Text") Icon="location_city" Path="general/cities" />
+
+                <RadzenPanelMenuItem Text=@StringResource.GetStringByKey("Menu_Inventory") Icon="inventory">
+                    <RadzenPanelMenuItem Text=@StringResource.GetStringByKey("Menu_Products") Icon="inventory_2" Path="settings/inventory/products" />
+                    <RadzenPanelMenuItem Text=@StringResource.GetStringByKey("Menu_StockMovements") Icon="low_priority" Path="settings/inventory/stockmovements" />
+                </RadzenPanelMenuItem>
             }
 
         </Authorized>

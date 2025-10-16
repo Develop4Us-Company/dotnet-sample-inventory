@@ -20,6 +20,8 @@
     <ProjectReference Include="../AppProject.Web.General/AppProject.Web.General.csproj" />
     <ProjectReference Include="../AppProject.Web.Models/AppProject.Web.Models.csproj" />
     <ProjectReference Include="../AppProject.Web.Shared/AppProject.Web.Shared.csproj" />
+    <ProjectReference Include="../AppProject.Core.Models.Inventory/AppProject.Core.Models.Inventory.csproj" />
+    <ProjectReference Include="../AppProject.Web.ApiClient.General/AppProject.Web.ApiClient.General.csproj" />
   </ItemGroup>
 
   <ItemGroup>

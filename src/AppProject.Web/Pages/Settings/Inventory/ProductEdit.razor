@@ -1,0 +1,97 @@
+@page "/settings/inventory/products/{id}"
+@page "/settings/inventory/products/new"
+
+@inherits AppProjectPageBase
+
+<PageTitle>@StringResource.GetStringByKey("Product_Edit_Title")</PageTitle>
+
+<RadzenText TextStyle="TextStyle.DisplayH3" Text=@StringResource.GetStringByKey("Product_Edit_Title") />
+
+<EditForm Model="@product" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="row">
+        <div class="col-md-6">
+            <RadzenFormField Text=@StringResource.GetStringByKey("Product_Name") Style="margin-top: 20px">
+                <RadzenTextBox @bind-Value="@product.Name" />
+                <ValidationMessage For="@(() => product.Name)" />
+            </RadzenFormField>
+
+            <RadzenFormField Text=@StringResource.GetStringByKey("Product_Code") Style="margin-top: 20px">
+                <RadzenTextBox @bind-Value="@product.Code" />
+                <ValidationMessage For="@(() => product.Code)" />
+            </RadzenFormField>
+
+            <RadzenFormField Text=@StringResource.GetStringByKey("Product_MinimumStockQuantity") Style="margin-top: 20px">
+                <RadzenNumeric @bind-Value="@product.MinimumStockQuantity" />
+                <ValidationMessage For="@(() => product.MinimumStockQuantity)" />
+            </RadzenFormField>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col">
+            <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Text="Save" />
+            <RadzenButton ButtonStyle="ButtonStyle.Light" Click=@(() => NavigationManager.NavigateTo("/settings/inventory/products")) Text="Cancel" />
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private Product product = new();
+
+    [Parameter]
+    public string? Id { get; set; }
+
+    [Inject]
+    private IProductClient ProductClient { get; set; } = default!;
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+
+    [Inject]
+    private NotificationService NotificationService { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!string.IsNullOrEmpty(Id) && Id != "new" && Guid.TryParse(Id, out var productId))
+        {
+            try
+            {
+                var listResponse = await ProductClient.GetListAsync();
+                product = listResponse.Entities.FirstOrDefault(p => p.Id == productId) ?? new Product { Id = productId };
+            }
+            catch
+            {
+                NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = "Failed to load product" });
+                NavigationManager.NavigateTo("/settings/inventory/products");
+            }
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            var request = new CreateOrUpdateRequest<Product> { Entity = product };
+            
+            if (!product.Id.HasValue)
+            {
+                await ProductClient.PostAsync(request);
+                NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success", Detail = "Product created" });
+            }
+            else
+            {
+                await ProductClient.PutAsync(request);
+                NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Success", Detail = "Product updated" });
+            }
+
+            NavigationManager.NavigateTo("/settings/inventory/products");
+        }
+        catch
+        {
+            NotificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = "Failed to save product" });
+        }
+    }
+}

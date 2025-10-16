@@ -13,6 +13,7 @@ using AppProject.Core.Infrastructure.Database.Entities.Auth;
 using AppProject.Core.Infrastructure.Database.Mapper;
 using AppProject.Core.Infrastructure.Email;
 using AppProject.Core.Infrastructure.Jobs;
+using AppProject.Core.Services.Inventory;
 using AppProject.Core.Services;
 using AppProject.Exceptions;
 using Hangfire;
@@ -272,6 +273,10 @@ public static class Bootstrap
                 y.AssignableTo<ISingletonService>())
             .AsImplementedInterfaces()
             .WithTransientLifetime());
+
+        builder.Services.AddScoped<IProductService, ProductService>();
+        builder.Services.AddScoped<IStockMovementService, ProductService>();
+        builder.Services.AddScoped<InventoryLowStockJob>();
     }
 
     private static void ConfigureUsers(WebApplicationBuilder builder)
@@ -537,6 +542,10 @@ public static class Bootstrap
         builder.Services.AddScoped<IJobDispatcher, JobDispatcher>();
     }
 
+        builder.Services.AddScoped<AppProject.Core.Services.Inventory.IProductService, AppProject.Core.Services.Inventory.ProductService>();
+        builder.Services.AddScoped<AppProject.Core.Services.Inventory.IStockMovementService, AppProject.Core.Services.Inventory.ProductService>();
+        builder.Services.AddScoped<InventoryLowStockJob>();
+
     private static IEnumerable<Assembly> GetControllerAssemblies() =>
         [
             Assembly.Load("AppProject.Core.Controllers.General"),
@@ -546,6 +555,7 @@ public static class Bootstrap
         [
             Assembly.Load("AppProject.Core.Services"),
             Assembly.Load("AppProject.Core.Services.General"),
+            Assembly.Load("AppProject.Core.Services.Inventory"),
         ];
 
     private class ConnectionStringsOptions
