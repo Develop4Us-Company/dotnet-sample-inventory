@@ -21,7 +21,7 @@
                     </RadzenFormField>
 
                     <RadzenFormField Text=@StringResource.GetStringByKey("Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_Label")>
-                        <RadzenNumeric @bind-Value=@this.Model.Quantity Name="QuantityField" Min="0.01" Step="0.01" />
+                        <RadzenNumeric @bind-Value=@this.Model.Quantity Name="QuantityField" Min="@(0.01m)" Step="0.01" />
                         <RadzenNumericRangeValidator Component="QuantityField" Min="0.01" Text=@StringResource.GetStringByKey("Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_InvalidValue") />
                     </RadzenFormField>
 

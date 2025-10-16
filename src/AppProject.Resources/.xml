@@ -397,6 +397,226 @@
               Looks up a localized string similar to Home.
             </summary>
         </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_LowStockEmail_Closing">
+            <summary>
+              Looks up a localized string similar to Please restock them as soon as possible..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_LowStockEmail_Intro">
+            <summary>
+              Looks up a localized string similar to The following products are below the minimum stock level:.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_LowStockEmail_ItemFormat">
+            <summary>
+              Looks up a localized string similar to {0}: balance {1}, minimum {2}.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_LowStockEmail_Subject">
+            <summary>
+              Looks up a localized string similar to Low stock alert.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_Product_ContainsStockMovements">
+            <summary>
+              Looks up a localized string similar to The product has stock movements and cannot be deleted..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_Product_DuplicateCode">
+            <summary>
+              Looks up a localized string similar to A product with the same code already exists..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_Product_DuplicateName">
+            <summary>
+              Looks up a localized string similar to A product with the same name already exists..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_CodeField_InvalidLength">
+            <summary>
+              Looks up a localized string similar to Code must have at most 200 characters..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_CodeField_Label">
+            <summary>
+              Looks up a localized string similar to Code.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_IdField_Text">
+            <summary>
+              Looks up a localized string similar to Identifier: {0}.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_InvalidValue">
+            <summary>
+              Looks up a localized string similar to Minimum stock must be zero or greater..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_Label">
+            <summary>
+              Looks up a localized string similar to Minimum stock.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_NameField_InvalidLength">
+            <summary>
+              Looks up a localized string similar to Name must have at most 200 characters..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_NameField_Label">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_NameField_Required">
+            <summary>
+              Looks up a localized string similar to Name is required..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_Title">
+            <summary>
+              Looks up a localized string similar to General information.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_Title">
+            <summary>
+              Looks up a localized string similar to Product.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductSummaryDropDownDataGridControl_CodeColumn_Title">
+            <summary>
+              Looks up a localized string similar to Code.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductSummaryDropDownDataGridControl_NameColumn_Title">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductSummaryPage_CodeColumn_Title">
+            <summary>
+              Looks up a localized string similar to Code.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductSummaryPage_MinimumQuantityColumn_Title">
+            <summary>
+              Looks up a localized string similar to Minimum stock.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductSummaryPage_NameColumn_Title">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_ProductSummaryPage_Title">
+            <summary>
+              Looks up a localized string similar to Products.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovement_InsufficientStock">
+            <summary>
+              Looks up a localized string similar to Insufficient stock for this movement..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovement_InvalidQuantity">
+            <summary>
+              Looks up a localized string similar to Quantity must be greater than zero..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovement_ProductNotFound">
+            <summary>
+              Looks up a localized string similar to Product not found..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_IdField_Text">
+            <summary>
+              Looks up a localized string similar to Identifier: {0}.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_IsOutboundField_Label">
+            <summary>
+              Looks up a localized string similar to Outbound movement.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_MovementDateField_Label">
+            <summary>
+              Looks up a localized string similar to Movement date.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_MovementDateField_Required">
+            <summary>
+              Looks up a localized string similar to Select a movement date..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Label">
+            <summary>
+              Looks up a localized string similar to Product.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Required">
+            <summary>
+              Looks up a localized string similar to Select a product..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_InvalidValue">
+            <summary>
+              Looks up a localized string similar to Quantity must be greater than zero..
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_Label">
+            <summary>
+              Looks up a localized string similar to Quantity.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_Title">
+            <summary>
+              Looks up a localized string similar to General information.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_Title">
+            <summary>
+              Looks up a localized string similar to Stock movement.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementSummaryPage_FilterContent_ProductField_Label">
+            <summary>
+              Looks up a localized string similar to Product.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementSummaryPage_IsOutboundColumn_Inbound_Text">
+            <summary>
+              Looks up a localized string similar to Inbound.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementSummaryPage_IsOutboundColumn_Outbound_Text">
+            <summary>
+              Looks up a localized string similar to Outbound.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementSummaryPage_IsOutboundColumn_Title">
+            <summary>
+              Looks up a localized string similar to Direction.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementSummaryPage_MovementDateColumn_Title">
+            <summary>
+              Looks up a localized string similar to Movement date.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementSummaryPage_ProductColumn_Title">
+            <summary>
+              Looks up a localized string similar to Product.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementSummaryPage_QuantityColumn_Title">
+            <summary>
+              Looks up a localized string similar to Quantity.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Inventory_StockMovementSummaryPage_Title">
+            <summary>
+              Looks up a localized string similar to Stock movements.
+            </summary>
+        </member>
         <member name="P:AppProject.Resources.Resource.Login_Button_Text">
             <summary>
               Looks up a localized string similar to Login.
@@ -422,9 +642,19 @@
               Looks up a localized string similar to Home.
             </summary>
         </member>
+        <member name="P:AppProject.Resources.Resource.Menu_Products_Item_Text">
+            <summary>
+              Looks up a localized string similar to Products.
+            </summary>
+        </member>
         <member name="P:AppProject.Resources.Resource.Menu_States_Item_Text">
             <summary>
               Looks up a localized string similar to States.
+            </summary>
+        </member>
+        <member name="P:AppProject.Resources.Resource.Menu_StockMovements_Item_Text">
+            <summary>
+              Looks up a localized string similar to Stock movements.
             </summary>
         </member>
         <member name="P:AppProject.Resources.Resource.ModelFormControl_CancelButton_Text">
