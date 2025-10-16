@@ -1,5 +1,6 @@
 using System;
 using AppProject.Core.Services.General;
+using AppProject.Core.Services.Inventory;
 using Hangfire;
 
 namespace AppProject.Core.API.Bootstraps;
@@ -20,6 +21,15 @@ public static class JobsBootstrap
 
         RecurringJob.AddOrUpdate<SampleJob>(
             recurringJobId: nameof(SampleJob),
+            job => job.ExecuteAsync(CancellationToken.None),
+            cronExpression: Cron.Daily,
+            new RecurringJobOptions
+            {
+                TimeZone = TimeZoneInfo.Local
+            });
+
+        RecurringJob.AddOrUpdate<InventoryLowStockJob>(
+            recurringJobId: nameof(InventoryLowStockJob),
             job => job.ExecuteAsync(CancellationToken.None),
             cronExpression: Cron.Daily,
             new RecurringJobOptions

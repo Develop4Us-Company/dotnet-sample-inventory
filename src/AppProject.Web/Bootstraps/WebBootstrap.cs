@@ -125,6 +125,7 @@ public static class WebBootstrap
         [
             Assembly.Load("AppProject.Web.ApiClient"),
             Assembly.Load("AppProject.Web.ApiClient.General"),
+            Assembly.Load("AppProject.Web.ApiClient.Inventory"),
         ];
 
     private class ApiOptions

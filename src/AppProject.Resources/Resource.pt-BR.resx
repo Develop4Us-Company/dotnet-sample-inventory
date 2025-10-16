@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -16,7 +16,7 @@
     <value>public</value>
   </resheader>
 
-  <!--Sample-->
+  
   <data name="Sample_Message_Text" xml:space="preserve">
     <value>Exemplo</value>
   </data>
@@ -30,7 +30,7 @@
     <value>Enviado em: {0}</value>
   </data>
 
-  <!--Validations-->
+  
   <data name="General_Country_DuplicateName" xml:space="preserve">
     <value>Esse nome de país já existe.</value>
   </data>
@@ -44,7 +44,7 @@
     <value>Esse nome de bairro já existe para a mesma cidade.</value>
   </data>
 
-  <!--Frontend-->
+  
   <data name="Footer_Text" xml:space="preserve">
     <value>Copyright © Nome da Sua Empresa. Todos os direitos reservados.</value>
   </data>
@@ -61,7 +61,7 @@
     <value>Desculpe, essa página não existe.</value>
   </data>
 
-  <!--Frontend Login-->
+  
   <data name="Login_Button_Text" xml:space="preserve">
     <value>Entrar</value>
   </data>
@@ -69,7 +69,7 @@
     <value>Sair</value>
   </data>
 
-  <!--Frontend Default Dialogs-->
+  
   <data name="Dialog_Error_Title" xml:space="preserve">
     <value>Erro</value>
   </data>
@@ -98,7 +98,7 @@
     <value>Aguarde...</value>
   </data>
 
-  <!--Frontend Default Exceptions-->
+  
   <data name="Exception_AdditionalInfo_Message" xml:space="preserve">
     <value>Detalhes adicionais: {0}</value>
   </data>
@@ -106,7 +106,7 @@
     <value>Exceção não tratada.</value>
   </data>
 
-  <!--Frontend DataGridControl-->
+  
   <data name="DataGridControl_NewButton_Text" xml:space="preserve">
     <value>Novo</value>
   </data>
@@ -123,7 +123,7 @@
     <value>Deletar</value>
   </data>
 
-  <!--Frontend SearchControl and SearchPage-->
+  
   <data name="SearchControl_SearchField_Label" xml:space="preserve">
     <value>Pesquisar</value>
   </data>
@@ -140,7 +140,7 @@
     <value>Filtros avançados</value>
   </data>
 
-  <!--Frontend ModelFormControl-->
+  
   <data name="ModelFormControl_SaveButton_Text" xml:space="preserve">
     <value>Salvar</value>
   </data>
@@ -154,7 +154,7 @@
     <value>Fechar</value>
   </data>
 
-  <!--Frontend Radzen-->
+  
   <data name="RadzenFieldset_Collapse_Title" xml:space="preserve">
     <value>Recolher</value>
   </data>
@@ -237,7 +237,7 @@
       <value>Pesquisar...</value>
   </data>
 
-  <!--Frontend Menus-->
+  
   <data name="Menu_Home_Item_Text" xml:space="preserve">
     <value>Início</value>
   </data>
@@ -251,7 +251,7 @@
     <value>Cidades</value>
   </data>
 
-  <!--Frontend General/CountrySummaryPage-->
+  
   <data name="General_CountrySummaryPage_Title" xml:space="preserve">
     <value>Países</value>
   </data>
@@ -259,7 +259,7 @@
     <value>Nome</value>
   </data>
 
-  <!--Frontend General/CountryFormPage-->
+  
   <data name="General_CountryFormPage_Title" xml:space="preserve">
     <value>País</value>
   </data>
@@ -285,12 +285,12 @@
     <value>Comprimento máximo: 200</value>
   </data>
 
-  <!--Frontend General/CountrySummaryDropDownDataGridControl-->
+  
   <data name="General_CountrySummaryDropDownDataGridControl_NameColumn_Title" xml:space="preserve">
     <value>Nome</value>
   </data>
 
-  <!--Frontend General/StateSummaryPage-->
+  
   <data name="General_StateSummaryPage_Title" xml:space="preserve">
     <value>Estados</value>
   </data>
@@ -304,7 +304,7 @@
     <value>País</value>
   </data>
 
-  <!--Frontend General/StateFormPage-->
+  
   <data name="General_StateFormPage_Title" xml:space="preserve">
     <value>Estado</value>
   </data>
@@ -336,7 +336,7 @@
     <value>País é obrigatório</value>
   </data>
 
-  <!--Frontend General/CitySummaryPage-->
+  
   <data name="General_CitySummaryPage_Title" xml:space="preserve">
     <value>Cidades</value>
   </data>
@@ -353,7 +353,7 @@
     <value>País</value>
   </data>
 
-  <!--Frontend General/StateSummaryDropDownDataGridControl-->
+  
   <data name="General_StateSummaryDropDownDataGridControl_NameColumn_Title" xml:space="preserve">
     <value>Nome</value>
   </data>
@@ -361,7 +361,7 @@
     <value>País</value>
   </data>
 
-  <!--Frontend General/CityFormPage-->
+  
   <data name="General_CityFormPage_Title" xml:space="preserve">
     <value>Cidade</value>
   </data>
@@ -399,7 +399,7 @@
     <value>Nome</value>
   </data>
 
-  <!--Frontend General/NeighborhoodFormPage-->
+  
   <data name="General_NeighborhoodFormPage_Title" xml:space="preserve">
     <value>Bairro</value>
   </data>
@@ -424,4 +424,4 @@
   <data name="General_NeighborhoodFormPage_GeneralFieldset_CodeField_InvalidLength" xml:space="preserve">
     <value>Comprimento máximo: 200</value>
   </data>
-</root>
+<data name="Inventory_ProductSummaryPage_Title"><value>Produtos</value></data><data name="Inventory_ProductSummaryPage_NameColumn_Title"><value>Nome</value></data><data name="Inventory_ProductSummaryPage_CodeColumn_Title"><value>Código</value></data><data name="Inventory_ProductSummaryPage_MinimumQuantityColumn_Title"><value>Estoque mínimo</value></data><data name="Inventory_ProductFormPage_Title"><value>Produto</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_Title"><value>Informações gerais</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_IdField_Text"><value>Identificador: {0}</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_NameField_Label"><value>Nome</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_NameField_Required"><value>Informe o nome.</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_NameField_InvalidLength"><value>O nome deve ter no máximo 200 caracteres.</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_CodeField_Label"><value>Código</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_CodeField_InvalidLength"><value>O código deve ter no máximo 200 caracteres.</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_Label"><value>Estoque mínimo</value></data><data name="Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_InvalidValue"><value>O estoque mínimo deve ser maior ou igual a zero.</value></data><data name="Inventory_ProductSummaryDropDownDataGridControl_NameColumn_Title"><value>Nome</value></data><data name="Inventory_ProductSummaryDropDownDataGridControl_CodeColumn_Title"><value>Código</value></data><data name="Inventory_StockMovementSummaryPage_Title"><value>Movimentos de estoque</value></data><data name="Inventory_StockMovementSummaryPage_FilterContent_ProductField_Label"><value>Produto</value></data><data name="Inventory_StockMovementSummaryPage_ProductColumn_Title"><value>Produto</value></data><data name="Inventory_StockMovementSummaryPage_QuantityColumn_Title"><value>Quantidade</value></data><data name="Inventory_StockMovementSummaryPage_MovementDateColumn_Title"><value>Data do movimento</value></data><data name="Inventory_StockMovementSummaryPage_IsOutboundColumn_Title"><value>Direção</value></data><data name="Inventory_StockMovementSummaryPage_IsOutboundColumn_Outbound_Text"><value>Saída</value></data><data name="Inventory_StockMovementSummaryPage_IsOutboundColumn_Inbound_Text"><value>Entrada</value></data><data name="Inventory_StockMovementFormPage_Title"><value>Movimento de estoque</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_Title"><value>Informações gerais</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_IdField_Text"><value>Identificador: {0}</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Label"><value>Produto</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Required"><value>Selecione um produto.</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_Label"><value>Quantidade</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_InvalidValue"><value>A quantidade deve ser maior que zero.</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_MovementDateField_Label"><value>Data do movimento</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_MovementDateField_Required"><value>Selecione a data do movimento.</value></data><data name="Inventory_StockMovementFormPage_GeneralFieldset_IsOutboundField_Label"><value>É saída</value></data><data name="Menu_Products_Item_Text"><value>Produtos</value></data><data name="Menu_StockMovements_Item_Text"><value>Movimentos de estoque</value></data><data name="Inventory_LowStockEmail_Subject"><value>Alerta de estoque baixo</value></data><data name="Inventory_LowStockEmail_Intro"><value>Os produtos abaixo estão com estoque abaixo do mínimo:</value></data><data name="Inventory_LowStockEmail_ItemFormat"><value>{0}: saldo {1}, mínimo {2}</value></data><data name="Inventory_LowStockEmail_Closing"><value>Reabasteça-os assim que possível.</value></data><data name="Inventory_Product_DuplicateName"><value>Já existe um produto com o mesmo nome.</value></data><data name="Inventory_Product_DuplicateCode"><value>Já existe um produto com o mesmo código.</value></data><data name="Inventory_Product_ContainsStockMovements"><value>O produto possui movimentos de estoque e não pode ser excluído.</value></data><data name="Inventory_StockMovement_InvalidQuantity"><value>A quantidade deve ser maior que zero.</value></data><data name="Inventory_StockMovement_ProductNotFound"><value>Produto não encontrado.</value></data><data name="Inventory_StockMovement_InsufficientStock"><value>Estoque insuficiente para este movimento.</value></data></root>
