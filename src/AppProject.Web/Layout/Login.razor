@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+@inherits AppProjectComponentBase
+
+<AuthorizeView>
+    <Authorized>
+        <RadzenProfileMenu>
+            <Template>
+                <RadzenGravatar Email=@context.User.Identity?.Name>
+                </RadzenGravatar>
+            </Template>
+            <ChildContent>
+                <RadzenButton Text=@StringResource.GetStringByKey("Logout_Button_Text") Icon="logout"
+                    ButtonStyle="ButtonStyle.Base" Click=@LogoutUser />
+            </ChildContent>
+        </RadzenProfileMenu>
+    </Authorized>
+    <NotAuthorized>
+        <RadzenButton Text=@StringResource.GetStringByKey("Login_Button_Text") Icon="login" ButtonStyle="ButtonStyle.Base"
+            Click=@LoginUser />
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+
+    private void LoginUser()
+    {
+        this.NavigationManager.NavigateTo("authentication/login");
+    }
+
+    private void LogoutUser()
+    {
+        this.NavigationManager.NavigateToLogout("authentication/logout");
+    }
+}
