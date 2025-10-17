@@ -4,6 +4,8 @@
 @using AppProject.Web.Models.Inventory
 @using AppProject.Web.Shared.Inventory.Components
 
+@attribute [Authorize]
+
 @inherits SearchPage<StockMovementSummarySearchRequest, StockMovementSummary>
 
 <SearchControl TRequest="StockMovementSummarySearchRequest" Request=@this.Request

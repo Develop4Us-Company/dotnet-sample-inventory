@@ -4,7 +4,7 @@ namespace AppProject.Web.Constants;
 
 public class AppProjectConstants
 {
-    public const string ProjectName = "AppProject";
+    public const string ProjectName = "Inventory";
 
     public const string LocalStorageKeyPrefix = $"{ProjectName}";
 

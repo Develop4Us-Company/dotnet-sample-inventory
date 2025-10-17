@@ -1,6 +1,8 @@
 @using AppProject.Web.ApiClient.Inventory
 @using AppProject.Web.Models.Inventory
 
+@attribute [Authorize]
+
 @inherits ModelFormPage<Product>
 
 <ModelFormControl TModel="Product" Model=@this.Model OnSave=@this.OnSaveAsync OnCancel=@this.OnCancelAsync>

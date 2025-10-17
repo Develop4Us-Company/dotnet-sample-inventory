@@ -26,6 +26,7 @@ Template for creating projects in .NET
   ```
 - Active accounts in Auth0, SendGrid, and GitHub (with access to GitHub Models) to configure the integrations described below.
 - Optional: install the global tool `dotnet-ef` to run migration commands (`dotnet tool install --global dotnet-ef`).
+- Important: do not let Copilot, Codex, or any generator auto-create EF Core snapshot or migration files. Always run the migration command/script manually (for example, `dotnet ef migrations add ...`) so the generated code stays correct.
 
 ### Step-by-step to set up the environment
 1. Clone the repository and restore the dependencies with `dotnet restore AppProject.slnx`.
@@ -90,7 +91,7 @@ Here are some project specifications.
 * The template already supports localization (`en-US`, `pt-BR`, and `es-ES`) in both the API and the frontend.
 * The frontend uses Radzen for UI components, Refit for HTTP clients, and OIDC authentication with Auth0.
 * Code style is validated with StyleCop (see `Stylecop.json`) and the shared settings in `Directory.Build.props`.
-* The backend and frontend projects target `net9.0` and have `implicit usings` and `nullable` enabled.
+* The backend and frontend projects target the .NET version and have `implicit usings` and `nullable` enabled.
 
 ## External integrations
 The sections below describe the registrations required for all integrations to work. After completing each step, copy the values into the `appsettings` files.
@@ -102,7 +103,7 @@ The sections below describe the registrations required for all integrations to w
    - **Allowed Callback URLs**: `https://localhost:7035/authentication/login-callback`, `https://localhost:7121/swagger/oauth2-redirect.html`
    - **Allowed Logout URLs**: `https://localhost:7035`, `https://localhost:7121/swagger/`
    - **Allowed Web Origins**: `https://localhost:7035`, `https://localhost:7121`
-4. Create an **API** in Auth0 and use the same value you set for `Auth0:Audience` (`https://appproject.api` by default) as the identifier.
+4. Create an **API** in Auth0 and use the same value you set for `Auth0:Audience` (`https://appproject.api` by default) as the identifier, then open **Access Settings** and check **Allow Offline Access**.
 5. To include `email`, `name`, and `roles` in the JWT, create a `post_login` Action with the script below:
    ```javascript
    if (api.accessToken) {
@@ -114,13 +115,18 @@ The sections below describe the registrations required for all integrations to w
          api.accessToken.setCustomClaim("name", event.user.name);
        }
 
-       // Adds roles if they exist
        if (event.authorization && event.authorization.roles) {
          api.accessToken.setCustomClaim("roles", event.authorization.roles);
        }
      }
    ```
-6. Copy `Authority`, `ClientId`, and `Audience` into the `appsettings`.
+6. Copy `Authority` and `ClientId` from the Single Page Application you created and copy the API `Audience` into the `appsettings`, keeping the `https://` prefix for both `Authority` and `Audience`. For example:
+   ```json
+   "Authority": "https://yourauth0domain.us.auth0.com",
+   "ClientId": "yourclientid",
+   "Audience": "https://youraudience.com"
+   ```
+> Note: When launching Swagger, clear the browser cache so it does not reuse parameters from other projects.
 
 ### SendGrid
 1. Create an account on the [SendGrid website](https://sendgrid.com/).
@@ -440,6 +446,7 @@ Template para criar projetos em .NET
   ```
 - Contas ativas no Auth0, SendGrid e GitHub (com acesso aos GitHub Models) para preencher as integrações descritas a seguir.
 - Opcional: instale a ferramenta global `dotnet-ef` para rodar comandos de migração (`dotnet tool install --global dotnet-ef`).
+- Importante: não permita que Copilot, Codex ou outro gerador crie automaticamente os arquivos de snapshot ou migration do EF Core. Execute manualmente o script/comando de migração (por exemplo, `dotnet ef migrations add ...`) para garantir que o código seja gerado corretamente.
 
 ### Passo a passo para configurar o ambiente
 1. Clone o repositório e restaure as dependências com `dotnet restore AppProject.slnx`.
@@ -504,7 +511,7 @@ Seguem algumas especificações do projeto.
 * O template já suporta localização (`en-US`, `pt-BR` e `es-ES`) tanto na API quanto no frontend.
 * O frontend usa Radzen para os componentes UI, Refit para os clientes HTTP e autenticação OIDC com Auth0.
 * O estilo de código é validado com StyleCop (veja `Stylecop.json`) e com as configurações compartilhadas em `Directory.Build.props`.
-* Os projetos backend e frontend executam com o `TargetFramework` `net9.0` e utilizam `implicit usings` e `nullable` habilitados.
+* Os projetos backend e frontend executam com o `TargetFramework` e utilizam `implicit usings` e `nullable` habilitados.
 
 ## Integrações externas
 As seções abaixo descrevem os cadastros necessários para que todas as integrações funcionem. Após concluir cada etapa, copie os valores para os arquivos `appsettings`.
@@ -516,7 +523,7 @@ As seções abaixo descrevem os cadastros necessários para que todas as integra
    - **Allowed Callback URLs**: `https://localhost:7035/authentication/login-callback`, `https://localhost:7121/swagger/oauth2-redirect.html`
    - **Allowed Logout URLs**: `https://localhost:7035`, `https://localhost:7121/swagger/`
    - **Allowed Web Origins**: `https://localhost:7035`, `https://localhost:7121`
-4. Crie uma **API** no Auth0 e use como *Identifier* o mesmo valor configurado em `Auth0:Audience` (`https://appproject.api` por padrão).
+4. Crie uma **API** no Auth0 e use como *Identifier* o mesmo valor configurado em `Auth0:Audience` (`https://appproject.api` por padrão). Em seguida, acesse **Access Settings** e marque a opção **Allow Offline Access**.
 5. Para incluir `email`, `name` e `roles` no JWT, crie uma Action do tipo `post_login` com o script abaixo:
    ```javascript
    if (api.accessToken) {
@@ -528,13 +535,18 @@ As seções abaixo descrevem os cadastros necessários para que todas as integra
          api.accessToken.setCustomClaim("name", event.user.name);
        }
 
-       // Adiciona roles se existirem
        if (event.authorization && event.authorization.roles) {
          api.accessToken.setCustomClaim("roles", event.authorization.roles);
        }
      }
    ```
-6. Copie `Authority`, `ClientId` e `Audience` para os `appsettings`.
+6. Copie `Authority` e `ClientId` da aplicação Single Page Application que você criou e copie o `Audience` da API para os `appsettings`, mantendo o prefixo `https://` tanto para o `Authority` quanto para o `Audience`. Por exemplo:
+   ```json
+   "Authority": "https://seuauth0domain.us.auth0.com",
+   "ClientId": "seuclientid",
+   "Audience": "https://seuaudience.com"
+   ```
+> Observação: Ao subir o Swagger, limpe o cache do navegador para evitar que ele reutilize parâmetros de outros projetos.
 
 ### SendGrid
 1. Crie uma conta no [site do SendGrid](https://sendgrid.com/).

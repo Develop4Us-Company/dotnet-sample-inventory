@@ -24,9 +24,9 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<TbNeighborhood> Neighborhoods { get; set; } = default!;
 
-    public DbSet<TbProduct> Products { get; set; } = default!;
+    //public DbSet<TbProduct> Products { get; set; } = default!;
 
-    public DbSet<TbStockMovement> StockMovements { get; set; } = default!;
+    //public DbSet<TbStockMovement> StockMovements { get; set; } = default!;
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -3,6 +3,8 @@
 @using AppProject.Web.ApiClient.Inventory
 @using AppProject.Web.Models.Inventory
 
+@attribute [Authorize]
+
 @inherits SearchPage<ProductSummarySearchRequest, ProductSummary>
 
 <SearchControl TRequest="ProductSummarySearchRequest" Request=@this.Request
