@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using AppProject.Core.Infrastructure.Database.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppProject.Core.Infrastructure.Database.Entities.Inventory;

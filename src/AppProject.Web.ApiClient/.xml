@@ -94,37 +94,16 @@
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.GetSummariesAsync(AppProject.Web.Models.Inventory.ProductSummarySearchRequest,System.Threading.CancellationToken)">
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.GetSummariesAsync(AppProject.Models.SearchRequest,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.AppProject#Web#ApiClient#Inventory#IProductSummaryClient#GetSummariesAsync(AppProject.Web.Models.Inventory.ProductSummarySearchRequest,System.Threading.CancellationToken)">
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.AppProject#Web#ApiClient#Inventory#IProductSummaryClient#GetSummariesAsync(AppProject.Models.SearchRequest,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.AppProject#Web#ApiClient#Inventory#IProductSummaryClient#GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="T:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient">
-            <inheritdoc />
-        </member>
-        <member name="P:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.Client">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.GetSummariesAsync(AppProject.Web.Models.Inventory.StockMovementSummarySearchRequest,System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.AppProject#Web#ApiClient#Inventory#IStockMovementSummaryClient#GetSummariesAsync(AppProject.Web.Models.Inventory.StockMovementSummarySearchRequest,System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.AppProject#Web#ApiClient#Inventory#IStockMovementSummaryClient#GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
     </members>

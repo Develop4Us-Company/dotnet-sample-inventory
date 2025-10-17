@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="../AppProject.Core.Contracts/AppProject.Core.Contracts.csproj" />
     <ProjectReference Include="../AppProject.Core.Models.General/AppProject.Core.Models.General.csproj" />
+    <ProjectReference Include="../AppProject.Core.Models.Inventory/AppProject.Core.Models.Inventory.csproj" />
     <ProjectReference Include="../AppProject.Core.Models/AppProject.Core.Models.csproj" />
     <ProjectReference Include="../AppProject.Exceptions/AppProject.Exceptions.csproj" />
     <ProjectReference Include="../AppProject.Resources/AppProject.Resources.csproj" />

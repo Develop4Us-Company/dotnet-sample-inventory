@@ -5,9 +5,9 @@
 
 @attribute [Authorize]
 
-@inherits SearchPage<ProductSummarySearchRequest, ProductSummary>
+@inherits SearchPage<SearchRequest, ProductSummary>
 
-<SearchControl TRequest="ProductSummarySearchRequest" Request=@this.Request
+<SearchControl TRequest="SearchRequest" Request=@this.Request
     Title=@StringResource.GetStringByKey("Inventory_ProductSummaryPage_Title") @bind-Take=@this.Request.Take
     @bind-SearchText=@this.Request.SearchText DisplayTakeInfo=@this.DisplayTakeInfo
     OnExecuteSearch=@this.ExecuteSearchAsync>

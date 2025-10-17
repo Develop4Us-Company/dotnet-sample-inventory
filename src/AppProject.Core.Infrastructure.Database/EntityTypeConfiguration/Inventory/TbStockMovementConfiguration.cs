@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using AppProject.Core.Infrastructure.Database.Entities.Inventory;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -12,4 +12,3 @@ public class TbStockMovementConfiguration : IEntityTypeConfiguration<TbStockMove
         builder.HasIndex(x => new { x.ProductId, x.MovementDate });
     }
 }
-*/

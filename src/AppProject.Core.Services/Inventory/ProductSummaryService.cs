@@ -12,7 +12,7 @@ public class ProductSummaryService(
     IDatabaseRepository databaseRepository)
     : BaseService, IProductSummaryService
 {
-    public async Task<SummariesResponse<ProductSummary>> GetSummariesAsync(ProductSummarySearchRequest request, CancellationToken cancellationToken = default)
+    public async Task<SummariesResponse<ProductSummary>> GetSummariesAsync(SearchRequest request, CancellationToken cancellationToken = default)
     {
         var searchText = request.SearchText?.Trim();
 

@@ -1,7 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using AppProject.Core.Infrastructure.Database.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppProject.Core.Infrastructure.Database.Entities.Inventory;
@@ -15,11 +14,14 @@ public class TbStockMovement : BaseEntity
     [Required]
     public Guid ProductId { get; set; }
 
+    [Required]
     [Precision(18, 2)]
     public decimal Quantity { get; set; }
 
+    [Required]
     public DateTime MovementDate { get; set; }
 
+    [Required]
     public bool IsOutbound { get; set; }
 
     [ForeignKey(nameof(ProductId))]

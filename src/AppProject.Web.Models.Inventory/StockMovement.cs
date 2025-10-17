@@ -11,7 +11,6 @@ public class StockMovement : ObservableModel, IEntity
     private DateTime movementDate = DateTime.UtcNow;
     private bool isOutbound;
     private byte[]? rowVersion;
-    private string? productName;
 
     public Guid? Id { get => this.id; set => this.Set(ref this.id, value); }
 
@@ -24,6 +23,4 @@ public class StockMovement : ObservableModel, IEntity
     public bool IsOutbound { get => this.isOutbound; set => this.Set(ref this.isOutbound, value); }
 
     public byte[]? RowVersion { get => this.rowVersion; set => this.Set(ref this.rowVersion, value); }
-
-    public string? ProductName { get => this.productName; set => this.Set(ref this.productName, value); }
 }

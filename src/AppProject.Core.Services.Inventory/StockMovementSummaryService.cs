@@ -20,8 +20,6 @@ public class StockMovementSummaryService(
         var movementSummaries = await databaseRepository.GetByConditionAsync<TbStockMovement, StockMovementSummary>(
             query =>
             {
-                query = query.Include(x => x.Product);
-
                 if (!string.IsNullOrWhiteSpace(searchText))
                 {
                     query = query.Where(x =>

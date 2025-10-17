@@ -6,7 +6,7 @@ namespace AppProject.Core.Services.Inventory;
 
 public interface IProductSummaryService
     : ITransientService,
-    IGetSummaries<ProductSummarySearchRequest, SummariesResponse<ProductSummary>>,
+    IGetSummaries<SearchRequest, SummariesResponse<ProductSummary>>,
     IGetSummary<GetByIdRequest<Guid>, SummaryResponse<ProductSummary>>
 {
 }

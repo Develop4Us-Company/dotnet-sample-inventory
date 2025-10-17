@@ -14,7 +14,7 @@ public class ProductSummaryController(IProductSummaryService productSummaryServi
     : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetSummariesAsync([FromQuery] ProductSummarySearchRequest request, CancellationToken cancellationToken = default)
+    public async Task<IActionResult> GetSummariesAsync([FromQuery] SearchRequest request, CancellationToken cancellationToken = default)
     {
         return this.Ok(await productSummaryService.GetSummariesAsync(request, cancellationToken));
     }

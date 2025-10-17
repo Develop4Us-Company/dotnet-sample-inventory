@@ -73,5 +73,26 @@
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementClient.AppProject#Web#ApiClient#Inventory#IStockMovementClient#DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
+        <member name="T:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.GetSummariesAsync(AppProject.Web.Models.Inventory.StockMovementSummarySearchRequest,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.AppProject#Web#ApiClient#Inventory#IStockMovementSummaryClient#GetSummariesAsync(AppProject.Web.Models.Inventory.StockMovementSummarySearchRequest,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.AppProject#Web#ApiClient#Inventory#IStockMovementSummaryClient#GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

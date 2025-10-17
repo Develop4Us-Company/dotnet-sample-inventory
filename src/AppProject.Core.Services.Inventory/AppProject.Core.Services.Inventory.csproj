@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="../AppProject.Core.Models.Inventory/AppProject.Core.Models.Inventory.csproj" />
-    <ProjectReference Include="../AppProject.Core.Infrastructure.Jobs/AppProject.Core.Infrastructure.Jobs.csproj" />
     <ProjectReference Include="../AppProject.Core.Services/AppProject.Core.Services.csproj" />
     <ProjectReference Include="../AppProject.Utils/AppProject.Utils.csproj" />
   </ItemGroup>

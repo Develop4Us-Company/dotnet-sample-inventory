@@ -98,11 +98,6 @@ public class StockMovementService(
             throw new AppException(ExceptionCode.Inventory_StockMovement_InvalidQuantity);
         }
 
-        if (movement.MovementDate == default)
-        {
-            throw new AppException(ExceptionCode.RequestValidation);
-        }
-
         var product = await databaseRepository.GetFirstOrDefaultAsync<TbProduct>(
             query => query.Where(x => x.Id == movement.ProductId),
             cancellationToken);

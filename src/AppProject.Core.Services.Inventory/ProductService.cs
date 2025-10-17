@@ -7,7 +7,6 @@ using AppProject.Exceptions;
 using AppProject.Models;
 using AppProject.Models.Auth;
 using Mapster;
-using System.Linq;
 
 namespace AppProject.Core.Services.Inventory;
 
@@ -100,11 +99,6 @@ public class ProductService(
 
     private async Task ValidateProductAsync(Product product, CancellationToken cancellationToken = default)
     {
-        if (string.IsNullOrWhiteSpace(product.Name))
-        {
-            throw new AppException(ExceptionCode.RequestValidation);
-        }
-
         if (await databaseRepository.HasAnyAsync<TbProduct>(
             query => query.Where(x => x.Name == product.Name && x.Id != product.Id),
             cancellationToken))

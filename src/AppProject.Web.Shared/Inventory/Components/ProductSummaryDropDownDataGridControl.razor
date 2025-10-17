@@ -36,7 +36,7 @@
         var summariesResponse = await this.GetResultOrHandleExceptionAsync<SummariesResponse<ProductSummary>>(
             async () =>
             {
-                var response = await this.ProductSummaryClient.GetSummariesAsync(new ProductSummarySearchRequest { SearchText = args.Filter, Take = 100 });
+                var response = await this.ProductSummaryClient.GetSummariesAsync(new SearchRequest { SearchText = args.Filter, Take = 100 });
 
                 if (string.IsNullOrWhiteSpace(args.Filter)
                     && this.Value is Guid selectedGuid

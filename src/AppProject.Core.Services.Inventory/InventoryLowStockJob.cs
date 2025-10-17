@@ -63,7 +63,6 @@ public class InventoryLowStockJob(
 
         var subject = StringResource.GetStringByKey("Inventory_LowStockEmail_Subject");
         var intro = StringResource.GetStringByKey("Inventory_LowStockEmail_Intro");
-        var itemFormat = StringResource.GetStringByKey("Inventory_LowStockEmail_ItemFormat");
         var closing = StringResource.GetStringByKey("Inventory_LowStockEmail_Closing");
 
         var bodyBuilder = new StringBuilder();
@@ -74,7 +73,7 @@ public class InventoryLowStockJob(
         {
             var balanceText = item.Balance.ToString("N2", CultureInfo.InvariantCulture);
             var minimumText = item.Product.MinimumStockQuantity.ToString("N2", CultureInfo.InvariantCulture);
-            var message = string.Format(CultureInfo.InvariantCulture, itemFormat, item.Product.Name, balanceText, minimumText);
+            var message = StringResource.GetStringByKey("Inventory_LowStockEmail_ItemFormat", item.Product.Name, balanceText, minimumText);
             bodyBuilder.AppendFormat("<li>{0}</li>", message);
         }
 

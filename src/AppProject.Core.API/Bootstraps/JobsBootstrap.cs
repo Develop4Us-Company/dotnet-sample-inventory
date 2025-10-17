@@ -19,6 +19,7 @@ public static class JobsBootstrap
                 TimeZone = TimeZoneInfo.Local
             });*/
 
+#if DEBUG
         RecurringJob.AddOrUpdate<SampleJob>(
             recurringJobId: nameof(SampleJob),
             job => job.ExecuteAsync(CancellationToken.None),
@@ -27,6 +28,7 @@ public static class JobsBootstrap
             {
                 TimeZone = TimeZoneInfo.Local
             });
+#endif
 
         RecurringJob.AddOrUpdate<InventoryLowStockJob>(
             recurringJobId: nameof(InventoryLowStockJob),

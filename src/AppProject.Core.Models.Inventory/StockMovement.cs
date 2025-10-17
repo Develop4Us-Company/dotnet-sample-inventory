@@ -12,12 +12,14 @@ public class StockMovement : IEntity
     [RequiredGuid]
     public Guid ProductId { get; set; }
 
+    [Required]
     [Range(0, double.MaxValue)]
     public decimal Quantity { get; set; }
 
     [Required]
     public DateTime MovementDate { get; set; }
 
+    [Required]
     public bool IsOutbound { get; set; }
 
     public byte[]? RowVersion { get; set; }
