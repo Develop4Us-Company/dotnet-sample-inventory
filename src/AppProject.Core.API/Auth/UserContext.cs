@@ -81,6 +81,7 @@ public class UserContext(
             {
                 user = new TbUser
                 {
+                    Id = Guid.NewGuid(),
                     Name = name,
                     Email = email,
                     IsSystemAdmin = false,

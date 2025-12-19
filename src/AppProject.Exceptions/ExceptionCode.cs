@@ -1,4 +1,4 @@
-﻿namespace AppProject.Exceptions;
+namespace AppProject.Exceptions;
 
 public enum ExceptionCode
 {
