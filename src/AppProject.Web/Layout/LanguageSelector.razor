@@ -1,7 +1,5 @@
-@using AppProject.Web.Constants
+﻿@using AppProject.Web.Constants
 @using Blazored.LocalStorage
-@using Microsoft.AspNetCore.Components
-@using Radzen
 @using Radzen.Blazor.Rendering
 @using System.Globalization
 
@@ -15,15 +13,15 @@
         border: var(--rz-panel-border);
         background-color: var(--rz-panel-background-color);
         box-shadow: var(--rz-panel-shadow);
-        border-radius: var(--rz-border-radius)
+        border-radius: var(--rz-border-radius);
     }
 </style>
 
 <RadzenButton @ref="button" Icon="language" ButtonStyle="ButtonStyle.Base"
-    Click="@ToggleLanguagePopupAsync" />
+    Click="@this.ToggleLanguagePopupAsync" />
 
-<Popup @ref=popup Lazy=true class="language-popup">
-    <RadzenDropDown TValue="CultureInfo" @bind-Value=Culture Change=@OnLanguageChangedAsync Data=@SupportedCultures
+<Popup @ref="popup" Lazy=true class="language-popup">
+    <RadzenDropDown TValue="CultureInfo" @bind-Value=@this.Culture Change=@this.OnLanguageChangedAsync Data=@this.SupportedCultures
         TextProperty="DisplayName" />
 </Popup>
 
@@ -35,14 +33,11 @@
     {
         new CultureInfo("en-US"),
         new CultureInfo("pt-BR"),
-        new CultureInfo("es-ES"),
+        new CultureInfo("es-ES")
     };
 
     [Inject]
     private ILocalStorageService LocalStorageService { get; set; } = default!;
-
-    [Inject]
-    private NavigationManager NavigationManager { get; set; } = default!;
 
     private CultureInfo Culture { get; set; } = CultureInfo.CurrentCulture;
 
@@ -52,12 +47,12 @@
             ? selectedCulture
             : new CultureInfo(AppProjectConstants.DefaultLanguage);
 
-        await LocalStorageService.SetItemAsync(AppProjectConstants.LanguageLocalStorageKey, culture.Name);
+        await this.LocalStorageService.SetItemAsync(AppProjectConstants.LanguageLocalStorageKey, culture.Name);
 
         CultureInfo.DefaultThreadCurrentCulture = culture;
         CultureInfo.DefaultThreadCurrentUICulture = culture;
 
-        NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+        this.NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
     }
 
     private async Task ToggleLanguagePopupAsync()

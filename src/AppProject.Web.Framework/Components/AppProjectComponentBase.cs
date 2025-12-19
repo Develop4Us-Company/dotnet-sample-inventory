@@ -116,7 +116,7 @@ public abstract class AppProjectComponentBase : ComponentBase
     }
 
     protected Task NavigateToPageAsync<TPage>(Dictionary<string, object>? routeParameters = null, Dictionary<string, object>? queryParameters = null, bool forceLoad = false)
-            where TPage : AppProjectPageBase
+        where TPage : AppProjectPageBase
     {
         this.NavigationManager.NavigateTo($"{typeof(TPage).Name}{this.GetParameters(routeParameters, queryParameters)}", forceLoad: forceLoad);
 
@@ -266,10 +266,10 @@ public abstract class AppProjectComponentBase : ComponentBase
         {
             Severity = severity,
             Summary = title,
-            Detail = message,
             Duration = duration,
+            Detail = message,
             Click = notificationClick,
-            Payload = payload,
+            Payload = payload
         });
 
         return Task.CompletedTask;
