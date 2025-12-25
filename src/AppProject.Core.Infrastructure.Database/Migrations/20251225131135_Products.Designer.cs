@@ -12,15 +12,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppProject.Core.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251017182657_StockMovements")]
-    partial class StockMovements
+    [Migration("20251225131135_Products")]
+    partial class Products
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.8")
+                .HasAnnotation("ProductVersion", "9.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -342,59 +342,6 @@ namespace AppProject.Core.Infrastructure.Database.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("AppProject.Core.Infrastructure.Database.Entities.Inventory.TbStockMovement", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTimeOffset>("CreatedAt")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid>("CreatedByUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedByUserName")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<bool>("IsOutbound")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("MovementDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("Quantity")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .IsRequired()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("rowversion");
-
-                    b.Property<DateTimeOffset?>("UpdatedAt")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid?>("UpdatedByUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("UpdatedByUserName")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId", "MovementDate");
-
-                    b.ToTable("StockMovements");
-                });
-
             modelBuilder.Entity("AppProject.Core.Infrastructure.Database.Entities.General.TbCity", b =>
                 {
                     b.HasOne("AppProject.Core.Infrastructure.Database.Entities.General.TbState", "State")
@@ -428,17 +375,6 @@ namespace AppProject.Core.Infrastructure.Database.Migrations
                     b.Navigation("Country");
                 });
 
-            modelBuilder.Entity("AppProject.Core.Infrastructure.Database.Entities.Inventory.TbStockMovement", b =>
-                {
-                    b.HasOne("AppProject.Core.Infrastructure.Database.Entities.Inventory.TbProduct", "Product")
-                        .WithMany("StockMovements")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("AppProject.Core.Infrastructure.Database.Entities.General.TbCity", b =>
                 {
                     b.Navigation("Neighborhoods");
@@ -452,11 +388,6 @@ namespace AppProject.Core.Infrastructure.Database.Migrations
             modelBuilder.Entity("AppProject.Core.Infrastructure.Database.Entities.General.TbState", b =>
                 {
                     b.Navigation("Cities");
-                });
-
-            modelBuilder.Entity("AppProject.Core.Infrastructure.Database.Entities.Inventory.TbProduct", b =>
-                {
-                    b.Navigation("StockMovements");
                 });
 #pragma warning restore 612, 618
         }

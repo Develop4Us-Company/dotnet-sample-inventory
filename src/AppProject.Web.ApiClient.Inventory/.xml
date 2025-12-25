@@ -28,18 +28,6 @@
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductClient.DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductClient.AppProject#Web#ApiClient#Inventory#IProductClient#GetAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductClient.AppProject#Web#ApiClient#Inventory#IProductClient#PostAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Web.Models.Inventory.Product},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductClient.AppProject#Web#ApiClient#Inventory#IProductClient#PutAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Web.Models.Inventory.Product},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductClient.AppProject#Web#ApiClient#Inventory#IProductClient#DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
         <member name="T:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementClient">
             <inheritdoc />
         </member>
@@ -61,18 +49,6 @@
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementClient.DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementClient.AppProject#Web#ApiClient#Inventory#IStockMovementClient#GetAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementClient.AppProject#Web#ApiClient#Inventory#IStockMovementClient#PostAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Web.Models.Inventory.StockMovement},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementClient.AppProject#Web#ApiClient#Inventory#IStockMovementClient#PutAsync(AppProject.Models.CreateOrUpdateRequest{AppProject.Web.Models.Inventory.StockMovement},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementClient.AppProject#Web#ApiClient#Inventory#IStockMovementClient#DeleteAsync(AppProject.Models.DeleteRequest{System.Guid},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
         <member name="T:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient">
             <inheritdoc />
         </member>
@@ -86,12 +62,6 @@
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.AppProject#Web#ApiClient#Inventory#IStockMovementSummaryClient#GetSummariesAsync(AppProject.Web.Models.Inventory.StockMovementSummarySearchRequest,System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIStockMovementSummaryClient.AppProject#Web#ApiClient#Inventory#IStockMovementSummaryClient#GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
     </members>

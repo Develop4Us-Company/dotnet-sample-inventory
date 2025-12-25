@@ -1,6 +1,5 @@
 using System;
 using System.Globalization;
-using System.Linq;
 using System.Text;
 using AppProject.Core.Contracts;
 using AppProject.Core.Infrastructure.Database;
@@ -57,7 +56,7 @@ public class InventoryLowStockJob(
 
         if (string.IsNullOrWhiteSpace(systemAdmin.Email))
         {
-            logger.LogWarning("System admin email is not configured. Low stock notification will not be sent.");
+            logger.LogError("System admin email is not configured. Low stock notification will not be sent.");
             return;
         }
 
@@ -88,7 +87,7 @@ public class InventoryLowStockJob(
 
         if (!sent)
         {
-            logger.LogWarning("Low stock notification email was not sent.");
+            logger.LogError("Low stock notification email was not sent.");
         }
     }
 }

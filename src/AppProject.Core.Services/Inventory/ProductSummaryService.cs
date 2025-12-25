@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using AppProject.Core.Infrastructure.Database;
 using AppProject.Core.Infrastructure.Database.Entities.Inventory;
 using AppProject.Core.Models.Inventory;

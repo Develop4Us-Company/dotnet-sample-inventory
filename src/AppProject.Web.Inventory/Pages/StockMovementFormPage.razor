@@ -1,8 +1,4 @@
-@using AppProject.Web.ApiClient.Inventory
-@using AppProject.Web.Models.Inventory
-@using AppProject.Web.Shared.Inventory.Components
-
-@attribute [Authorize]
+﻿@attribute [Authorize]
 
 @inherits ModelFormPage<StockMovement>
 
@@ -19,7 +15,7 @@
 
                     <RadzenFormField Text=@StringResource.GetStringByKey("Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Label")>
                         <ProductSummaryDropDownDataGridControl TValue="Guid" Name="ProductField" @bind-Value=@this.Model.ProductId />
-                        <RadzenRequiredValidator Component="ProductField" Text=@StringResource.GetStringByKey("Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Required") />
+                        <RadzenCustomValidator Component="ProductField" Validator="() => this.Model.ProductId != Guid.Empty" Text=@StringResource.GetStringByKey("Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Required") />
                     </RadzenFormField>
 
                     <RadzenFormField Text=@StringResource.GetStringByKey("Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_Label")>

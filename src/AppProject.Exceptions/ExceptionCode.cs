@@ -13,7 +13,6 @@ public enum ExceptionCode
     General_State_DuplicateName,
     General_City_DuplicateName,
     General_City_Neighborhood_DuplicateName,
-
     Inventory_Product_DuplicateName,
     Inventory_Product_DuplicateCode,
     Inventory_Product_ContainsStockMovements,

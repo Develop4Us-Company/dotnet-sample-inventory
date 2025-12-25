@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -61,7 +61,7 @@
   <data name="Inventory_StockMovement_InsufficientStock" xml:space="preserve">
     <value>Insufficient stock for this movement.</value>
   </data>
-  
+
   <!--Frontend-->
   <data name="Footer_Text" xml:space="preserve">
     <value>Copyright © Your Company Name. All rights reserved.</value>
@@ -474,10 +474,10 @@
     <value>Product</value>
   </data>
   <data name="Inventory_ProductFormPage_GeneralFieldset_Title" xml:space="preserve">
-    <value>General information</value>
+    <value>General</value>
   </data>
   <data name="Inventory_ProductFormPage_GeneralFieldset_IdField_Text" xml:space="preserve">
-    <value>Identifier: {0}</value>
+    <value>Id: {0}</value>
   </data>
   <data name="Inventory_ProductFormPage_GeneralFieldset_NameField_Label" xml:space="preserve">
     <value>Name</value>
@@ -540,10 +540,10 @@
     <value>Stock movement</value>
   </data>
   <data name="Inventory_StockMovementFormPage_GeneralFieldset_Title" xml:space="preserve">
-    <value>General information</value>
+    <value>General</value>
   </data>
   <data name="Inventory_StockMovementFormPage_GeneralFieldset_IdField_Text" xml:space="preserve">
-    <value>Identifier: {0}</value>
+    <value>Id: {0}</value>
   </data>
   <data name="Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Label" xml:space="preserve">
     <value>Product</value>
@@ -580,5 +580,4 @@
   <data name="Inventory_LowStockEmail_Closing" xml:space="preserve">
     <value>Please restock them as soon as possible.</value>
   </data>
-
 </root>

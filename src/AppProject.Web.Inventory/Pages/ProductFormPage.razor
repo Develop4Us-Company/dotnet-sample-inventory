@@ -1,7 +1,4 @@
-@using AppProject.Web.ApiClient.Inventory
-@using AppProject.Web.Models.Inventory
-
-@attribute [Authorize]
+﻿@attribute [Authorize]
 
 @inherits ModelFormPage<Product>
 
@@ -17,18 +14,18 @@
                 <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem" Wrap="FlexWrap.Wrap">
 
                     <RadzenFormField Text=@StringResource.GetStringByKey("Inventory_ProductFormPage_GeneralFieldset_NameField_Label")>
-                        <RadzenTextBox Name="NameField" @bind-Value=@this.Model.Name />
+                        <RadzenTextBox Name="NameField" @bind-Value=@this.Model.Name/>
                         <RadzenRequiredValidator Component="NameField" Text=@StringResource.GetStringByKey("Inventory_ProductFormPage_GeneralFieldset_NameField_Required") />
                         <RadzenLengthValidator Component="NameField" Max="200" Text=@StringResource.GetStringByKey("Inventory_ProductFormPage_GeneralFieldset_NameField_InvalidLength") />
                     </RadzenFormField>
 
                     <RadzenFormField Text=@StringResource.GetStringByKey("Inventory_ProductFormPage_GeneralFieldset_CodeField_Label")>
-                        <RadzenTextBox Name="CodeField" @bind-Value=@this.Model.Code />
+                        <RadzenTextBox Name="CodeField" @bind-Value=@this.Model.Code/>
                         <RadzenLengthValidator Component="CodeField" Max="200" Text=@StringResource.GetStringByKey("Inventory_ProductFormPage_GeneralFieldset_CodeField_InvalidLength") />
                     </RadzenFormField>
 
                     <RadzenFormField Text=@StringResource.GetStringByKey("Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_Label")>
-                        <RadzenNumeric @bind-Value=@this.Model.MinimumStockQuantity Name="MinimumQuantityField" Min="0" Step="0.01" />
+                        <RadzenNumeric Name="MinimumQuantityField" @bind-Value=@this.Model.MinimumStockQuantity Min="0" Step="0.01"/>
                         <RadzenNumericRangeValidator Component="MinimumQuantityField" Min="0" Text=@StringResource.GetStringByKey("Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_InvalidValue") />
                     </RadzenFormField>
 

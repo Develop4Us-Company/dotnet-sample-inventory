@@ -540,7 +540,7 @@ public static class Bootstrap
     private static IEnumerable<Assembly> GetControllerAssemblies() =>
         [
             Assembly.Load("AppProject.Core.Controllers.General"),
-            Assembly.Load("AppProject.Core.Controllers.Inventory"),
+            Assembly.Load("AppProject.Core.Controllers.Inventory")
         ];
 
     private static IEnumerable<Assembly> GetServiceAssemblies() =>

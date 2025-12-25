@@ -79,11 +79,5 @@
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.AppProject#Web#ApiClient#Inventory#IProductSummaryClient#GetSummariesAsync(AppProject.Models.SearchRequest,System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.AppProject#Web#ApiClient#Inventory#IProductSummaryClient#GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
     </members>
 </doc>

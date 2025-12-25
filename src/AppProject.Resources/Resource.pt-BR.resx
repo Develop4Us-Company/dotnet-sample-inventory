@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -474,10 +474,10 @@
     <value>Produto</value>
   </data>
   <data name="Inventory_ProductFormPage_GeneralFieldset_Title" xml:space="preserve">
-    <value>Informações gerais</value>
+    <value>Geral</value>
   </data>
   <data name="Inventory_ProductFormPage_GeneralFieldset_IdField_Text" xml:space="preserve">
-    <value>Identificador: {0}</value>
+    <value>Id: {0}</value>
   </data>
   <data name="Inventory_ProductFormPage_GeneralFieldset_NameField_Label" xml:space="preserve">
     <value>Nome</value>
@@ -540,10 +540,10 @@
     <value>Movimento de estoque</value>
   </data>
   <data name="Inventory_StockMovementFormPage_GeneralFieldset_Title" xml:space="preserve">
-    <value>Informações gerais</value>
+    <value>Geral</value>
   </data>
   <data name="Inventory_StockMovementFormPage_GeneralFieldset_IdField_Text" xml:space="preserve">
-    <value>Identificador: {0}</value>
+    <value>Id: {0}</value>
   </data>
   <data name="Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Label" xml:space="preserve">
     <value>Produto</value>
@@ -580,5 +580,4 @@
   <data name="Inventory_LowStockEmail_Closing" xml:space="preserve">
     <value>Reabasteça-os assim que possível.</value>
   </data>
-
 </root>

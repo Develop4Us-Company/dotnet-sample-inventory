@@ -444,7 +444,7 @@
         </member>
         <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_IdField_Text">
             <summary>
-              Looks up a localized string similar to Identifier: {0}.
+              Looks up a localized string similar to Id: {0}.
             </summary>
         </member>
         <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_InvalidValue">
@@ -474,7 +474,7 @@
         </member>
         <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_GeneralFieldset_Title">
             <summary>
-              Looks up a localized string similar to General information.
+              Looks up a localized string similar to General.
             </summary>
         </member>
         <member name="P:AppProject.Resources.Resource.Inventory_ProductFormPage_Title">
@@ -529,7 +529,7 @@
         </member>
         <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_IdField_Text">
             <summary>
-              Looks up a localized string similar to Identifier: {0}.
+              Looks up a localized string similar to Id: {0}.
             </summary>
         </member>
         <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_IsOutboundField_Label">
@@ -569,7 +569,7 @@
         </member>
         <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_GeneralFieldset_Title">
             <summary>
-              Looks up a localized string similar to General information.
+              Looks up a localized string similar to General.
             </summary>
         </member>
         <member name="P:AppProject.Resources.Resource.Inventory_StockMovementFormPage_Title">
