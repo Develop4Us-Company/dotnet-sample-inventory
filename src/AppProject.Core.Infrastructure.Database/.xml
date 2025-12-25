@@ -40,5 +40,29 @@
         <member name="M:AppProject.Core.Infrastructure.Database.Migrations.CountriesStatesCities.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:AppProject.Core.Infrastructure.Database.Migrations.Products">
+            <inheritdoc />
+        </member>
+        <member name="M:AppProject.Core.Infrastructure.Database.Migrations.Products.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AppProject.Core.Infrastructure.Database.Migrations.Products.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AppProject.Core.Infrastructure.Database.Migrations.Products.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AppProject.Core.Infrastructure.Database.Migrations.StockMovements">
+            <inheritdoc />
+        </member>
+        <member name="M:AppProject.Core.Infrastructure.Database.Migrations.StockMovements.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AppProject.Core.Infrastructure.Database.Migrations.StockMovements.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AppProject.Core.Infrastructure.Database.Migrations.StockMovements.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

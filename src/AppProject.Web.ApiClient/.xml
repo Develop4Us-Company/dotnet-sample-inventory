@@ -64,5 +64,20 @@
         <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientGeneralIStateSummaryClient.GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
+        <member name="T:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.GetSummariesAsync(AppProject.Models.SearchRequest,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.AppProjectWebApiClientInventoryIProductSummaryClient.GetSummaryAsync(AppProject.Models.GetByIdRequest{System.Guid},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

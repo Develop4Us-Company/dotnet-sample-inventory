@@ -18,12 +18,14 @@
     <ProjectReference Include="..\AppProject.Web.ApiClient\AppProject.Web.ApiClient.csproj" />
     <ProjectReference Include="..\AppProject.Web.Framework\AppProject.Web.Framework.csproj" />
     <ProjectReference Include="..\AppProject.Web.General\AppProject.Web.General.csproj" />
+    <ProjectReference Include="..\AppProject.Web.Inventory\AppProject.Web.Inventory.csproj" />
     <ProjectReference Include="..\AppProject.Web.Models\AppProject.Web.Models.csproj" />
     <ProjectReference Include="..\AppProject.Web.Shared\AppProject.Web.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <BlazorWebAssemblyLazyLoad Include="AppProject.Web.General.dll" />
+    <BlazorWebAssemblyLazyLoad Include="AppProject.Web.Inventory.dll" />
   </ItemGroup>
 
   <ItemGroup>

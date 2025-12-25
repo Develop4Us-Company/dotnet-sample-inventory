@@ -5,5 +5,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="General\" />
+    <Folder Include="Inventory\" />
   </ItemGroup>
 </Project>

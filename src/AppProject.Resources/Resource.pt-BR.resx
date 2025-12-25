@@ -43,6 +43,24 @@
   <data name="General_City_Neighborhood_DuplicateName" xml:space="preserve">
     <value>Esse nome de bairro já existe para a mesma cidade.</value>
   </data>
+  <data name="Inventory_Product_DuplicateName" xml:space="preserve">
+    <value>Já existe um produto com o mesmo nome.</value>
+  </data>
+  <data name="Inventory_Product_DuplicateCode" xml:space="preserve">
+    <value>Já existe um produto com o mesmo código.</value>
+  </data>
+  <data name="Inventory_Product_ContainsStockMovements" xml:space="preserve">
+    <value>O produto possui movimentos de estoque e não pode ser excluído.</value>
+  </data>
+  <data name="Inventory_StockMovement_InvalidQuantity" xml:space="preserve">
+    <value>A quantidade deve ser maior que zero.</value>
+  </data>
+  <data name="Inventory_StockMovement_ProductNotFound" xml:space="preserve">
+    <value>Produto não encontrado.</value>
+  </data>
+  <data name="Inventory_StockMovement_InsufficientStock" xml:space="preserve">
+    <value>Estoque insuficiente para este movimento.</value>
+  </data>
 
   <!--Frontend-->
   <data name="Footer_Text" xml:space="preserve">
@@ -256,6 +274,12 @@
   <data name="Menu_Cities_Item_Text" xml:space="preserve">
     <value>Cidades</value>
   </data>
+  <data name="Menu_Products_Item_Text" xml:space="preserve">
+    <value>Produtos</value>
+  </data>
+  <data name="Menu_StockMovements_Item_Text" xml:space="preserve">
+    <value>Movimentos de estoque</value>
+  </data>
 
   <!--Frontend General/CountrySummaryPage-->
   <data name="General_CountrySummaryPage_Title" xml:space="preserve">
@@ -429,5 +453,131 @@
   </data>
   <data name="General_NeighborhoodFormPage_GeneralFieldset_CodeField_InvalidLength" xml:space="preserve">
     <value>Comprimento máximo: 200</value>
+  </data>
+
+  <!--Frontend Inventory/ProductSummaryPage-->
+  <data name="Inventory_ProductSummaryPage_Title" xml:space="preserve">
+    <value>Produtos</value>
+  </data>
+  <data name="Inventory_ProductSummaryPage_NameColumn_Title" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Inventory_ProductSummaryPage_CodeColumn_Title" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Inventory_ProductSummaryPage_MinimumQuantityColumn_Title" xml:space="preserve">
+    <value>Estoque mínimo</value>
+  </data>
+
+  <!--Frontend Inventory/ProductFormPage-->
+  <data name="Inventory_ProductFormPage_Title" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_Title" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_IdField_Text" xml:space="preserve">
+    <value>Id: {0}</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_NameField_Label" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_NameField_Required" xml:space="preserve">
+    <value>Informe o nome.</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_NameField_InvalidLength" xml:space="preserve">
+    <value>O nome deve ter no máximo 200 caracteres.</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_CodeField_Label" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_CodeField_InvalidLength" xml:space="preserve">
+    <value>O código deve ter no máximo 200 caracteres.</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_Label" xml:space="preserve">
+    <value>Estoque mínimo</value>
+  </data>
+  <data name="Inventory_ProductFormPage_GeneralFieldset_MinimumQuantityField_InvalidValue" xml:space="preserve">
+    <value>O estoque mínimo deve ser maior ou igual a zero.</value>
+  </data>
+
+  <!--Frontend Inventory/ProductSummaryDropDownDataGridControl-->
+  <data name="Inventory_ProductSummaryDropDownDataGridControl_NameColumn_Title" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Inventory_ProductSummaryDropDownDataGridControl_CodeColumn_Title" xml:space="preserve">
+    <value>Código</value>
+  </data>
+
+  <!--Frontend Inventory/StockMovementSummaryPage-->
+  <data name="Inventory_StockMovementSummaryPage_Title" xml:space="preserve">
+    <value>Movimentos de estoque</value>
+  </data>
+  <data name="Inventory_StockMovementSummaryPage_FilterContent_ProductField_Label" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="Inventory_StockMovementSummaryPage_ProductColumn_Title" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="Inventory_StockMovementSummaryPage_QuantityColumn_Title" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+  <data name="Inventory_StockMovementSummaryPage_MovementDateColumn_Title" xml:space="preserve">
+    <value>Data do movimento</value>
+  </data>
+  <data name="Inventory_StockMovementSummaryPage_IsOutboundColumn_Title" xml:space="preserve">
+    <value>Direção</value>
+  </data>
+  <data name="Inventory_StockMovementSummaryPage_IsOutboundColumn_Outbound_Text" xml:space="preserve">
+    <value>Saída</value>
+  </data>
+  <data name="Inventory_StockMovementSummaryPage_IsOutboundColumn_Inbound_Text" xml:space="preserve">
+    <value>Entrada</value>
+  </data>
+
+  <!--Frontend Inventory/StockMovementFormPage-->
+  <data name="Inventory_StockMovementFormPage_Title" xml:space="preserve">
+    <value>Movimento de estoque</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_Title" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_IdField_Text" xml:space="preserve">
+    <value>Id: {0}</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Label" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_ProductField_Required" xml:space="preserve">
+    <value>Selecione um produto.</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_Label" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_QuantityField_InvalidValue" xml:space="preserve">
+    <value>A quantidade deve ser maior que zero.</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_MovementDateField_Label" xml:space="preserve">
+    <value>Data do movimento</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_MovementDateField_Required" xml:space="preserve">
+    <value>Selecione a data do movimento.</value>
+  </data>
+  <data name="Inventory_StockMovementFormPage_GeneralFieldset_IsOutboundField_Label" xml:space="preserve">
+    <value>É saída</value>
+  </data>
+
+  <!--Frontend Inventory/LowStockEmail-->
+  <data name="Inventory_LowStockEmail_Subject" xml:space="preserve">
+    <value>Alerta de estoque baixo</value>
+  </data>
+  <data name="Inventory_LowStockEmail_Intro" xml:space="preserve">
+    <value>Os produtos abaixo estão com estoque abaixo do mínimo:</value>
+  </data>
+  <data name="Inventory_LowStockEmail_ItemFormat" xml:space="preserve">
+    <value>{0}: saldo {1}, mínimo {2}</value>
+  </data>
+  <data name="Inventory_LowStockEmail_Closing" xml:space="preserve">
+    <value>Reabasteça-os assim que possível.</value>
   </data>
 </root>
